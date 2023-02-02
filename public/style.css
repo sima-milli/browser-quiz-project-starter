@@ -94,12 +94,14 @@ button:focus {
 /*WELLCOME PAGE STYLES*/
 
 #wellcome-outer-div {
+  background-color: #031b2b;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-around;
   height: 50vh;
   font-family: 'Teko', sans-serif;
+  opacity: 0.8;
   backdrop-filter: blur(15px);
 }
 
