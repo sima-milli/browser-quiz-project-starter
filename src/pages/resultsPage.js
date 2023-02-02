@@ -1,6 +1,9 @@
-import { initWelcomePage } from './welcomePage';
+import { initWelcomePage } from './welcomePage.js';
 import { createResultsElement } from '../views/resultsView.js';
-import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants';
+import {
+  BACK_TO_WELCOME_PAGE_BUTTON_ID,
+  USER_INTERFACE_ID,
+} from '../constants.js';
 
 export const initResultsPage = () => {
   const resultsElement = createResultsElement();
