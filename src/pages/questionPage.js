@@ -35,7 +35,7 @@ const nextQuestion = () => {
   initQuestionPage();
   // logic to remove "next question" and to add "view results button"
   // addEventListener doesnt work
-  if (quizData.currentQuestionIndex === 9) {
+  if (quizData.currentQuestionIndex === quizData.questions.length - 1) {
     const resultButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
     resultButton.textContent = 'View results';
     resultButton.id = 'show-results-button';
