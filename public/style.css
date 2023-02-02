@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  background-color: rgb(78, 75, 75);
+  background-color: rgb(15, 15, 15);
 }
 /* add the img folder with this img 'stars.jpg'  */
 body {
@@ -112,13 +112,46 @@ button:focus {
   justify-content: space-around;
 }
 #input-name {
+  text-align: center;
   width: 25%;
-  height: 6vh;
+  height: 8vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+  margin: auto;
+  font-size: 1.5rem;
+  background-color: #313334;
+  color:#D0E5F3;
 }
 
 #start-quiz-button {
   width: 25%;
-  height: 6vh;
+  height: 8vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(248, 248, 248);
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  font-size: 1.5rem;
+  background-color: #313334;
+  color:#D0E5F3;
+
+}
+#start-quiz-button:hover{
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #04a72d;
+  background-color: #D0E5F3;
+
+}
+
+
+#quiz-rules-list{
+  font-size: large;
+}
+
+#wellcome-h1{
+  color: #D0E5F3;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 900px) {
@@ -126,6 +159,16 @@ button:focus {
     width: fit-content;
     display: grid;
     margin-top: -5rem;
+  }
+  #wellcome-outer-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    height: auto;
+    font-family: 'Teko', sans-serif;
+    backdrop-filter: blur(15px);
   }
   /* .rocket-background img{
       width: 80%;

@@ -3,11 +3,11 @@ import { createWelcomeElement } from '../views/welcomeView.js';
 import { quizData } from '../data.js';
 
 // THİS SHOULD BE EXPORTED QUESTİON PAGE.
-import { initQuestionPage } from '../pages/questionPage.js';
+//import { initQuestionPage } from '../pages/questionPage.js';
 
 export const initWelcomePage = () => {
   // we can use the same logic here.
-  quizData.currentQuestionIndex = 0;
+  //quizData.currentQuestionIndex = 0;
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 
@@ -21,5 +21,5 @@ export const initWelcomePage = () => {
 
 const startQuiz = () => {
   //ıt will initialize the question page.
-  initQuestionPage();
+  //initQuestionPage();
 };
