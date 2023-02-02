@@ -41,6 +41,8 @@ body {
   box-shadow: 0 0 10px 2px black;
   width: 900px;
   overflow: hidden;
+  backdrop-filter: blur(15px);
+  /* margin-bottom: 55rem; */
   opacity: 0.8;
 }
 
@@ -86,6 +88,35 @@ button:hover {
 button:focus {
   outline: none;
   background-color: rgb(30, 166, 0);
+}
+/*WELCOME PAGE STYLES*/
+
+#welcome-outer-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  height: 50vh;
+  font-family: 'Teko', sans-serif;
+  backdrop-filter: blur(15px);
+}
+
+#quiz-rules-list {
+  white-space: pre;
+}
+#bottom-div {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+#input-name {
+  width: 25%;
+  height: 6vh;
+}
+
+#start-quiz-button {
+  width: 25%;
+  height: 6vh;
 }
 
 @media (max-width: 900px) {
