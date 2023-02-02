@@ -1,5 +1,5 @@
-import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants';
-import { quizData } from '../data';
+import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants.js';
+import { quizData } from '../data.js';
 
 const getSelected = () => {
   document.querySelectorAll('input[name="answer"]');
