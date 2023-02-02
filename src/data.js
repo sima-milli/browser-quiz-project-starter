@@ -13,7 +13,7 @@
 
 // fill data and change format for all elements
 export const quizData = {
-  userName:'',
+  userName: '',
   currentQuestionIndex: 0,
   questions: [
     {

@@ -39,6 +39,6 @@ export const createWelcomeElement = () => {
   button.setAttribute('id', START_QUIZ_BUTTON_ID);
 
   button.textContent = 'Start Quiz';
-  
+
   return outerDiv;
 };
