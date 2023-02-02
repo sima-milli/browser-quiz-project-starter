@@ -1,8 +1,11 @@
-import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants.js';
+import {
+  BACK_TO_WELCOME_PAGE_BUTTON_ID,
+  USER_INTERFACE_ID,
+} from '../constants.js';
 import { quizData } from '../data.js';
 
 const getSelected = () => {
-  document.querySelectorAll('input[name="answer"]');
+  let answerEls = document.querySelectorAll('input[name="answer"]');
   let answer; // array
   answerEls.forEach((answerEl) => {
     if (answerEl.checked) {
@@ -26,9 +29,13 @@ const getScore = () => {
 };
 
 export const createResultsElement = () => {
+  const score = getScore();
+  const userInterface = document.getElementById(USER_INTERFACE_ID);
+  userInterface.innerHTML = '';
   const element = document.createElement('div');
+  userInterface.appendChild(element);
   element.innerHTML = String.raw`
-    <h2>You answered ${getScore} correct answers out of ${quizData.length} questions</h2>
+    <h2>You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
           
     <button id="${BACK_TO_WELCOME_PAGE_BUTTON_ID}">Redo Quiz</button>
   `;

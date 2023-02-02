@@ -6,7 +6,7 @@ import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
 } from '../constants.js';
-import {initResultsPage} from './resultsPage.js';
+import { createResultsElement } from '../views/resultsView.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -24,24 +24,22 @@ export const initQuestionPage = () => {
     const answerElement = createAnswerElement(key, answerText);
     answersListElement.appendChild(answerElement);
   }
-
-  document
-    .getElementById(NEXT_QUESTION_BUTTON_ID)
-    .addEventListener('click', nextQuestion);
-};
-
-const nextQuestion = () => {
-  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-
-  initQuestionPage();
-  // logic to remove "next question" and to add "view results button"
-  // addEventListener doesnt work
   if (quizData.currentQuestionIndex === quizData.questions.length - 1) {
     const resultButton = document.getElementById(NEXT_QUESTION_BUTTON_ID);
     resultButton.textContent = 'View results';
     resultButton.id = 'show-results-button';
     document
       .getElementById('show-results-button')
-      .addEventListener('click', initResultsPage);
+      .addEventListener('click', createResultsElement);
+  } else {
+    document
+      .getElementById(NEXT_QUESTION_BUTTON_ID)
+      .addEventListener('click', nextQuestion);
   }
+};
+
+const nextQuestion = () => {
+  quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
+
+  initQuestionPage();
 };
