@@ -105,6 +105,8 @@ button:focus {
 
 #quiz-rules-list {
   white-space: pre;
+  color: #D0E5F3;
+  line-height: 2rem;
 }
 #bottom-div {
   display: flex;
@@ -160,16 +162,65 @@ button:focus {
     display: grid;
     margin-top: -5rem;
   }
+
   #wellcome-outer-div {
+    height: 40vh;
     padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-around;
-    height: auto;
     font-family: 'Teko', sans-serif;
     backdrop-filter: blur(15px);
   }
+
+  #quiz-rules-list{
+    display: none;
+  }
+  #wellcome-h1{
+    color: #D0E5F3;
+    font-size: 2rem;
+  }
+  #start-quiz-button {
+    margin-top: 5%;
+    width: 50%;
+    height: 6vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(248, 248, 248);
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    background-color: #313334;
+    color:#D0E5F3;
+  
+  }
+  #start-quiz-button:hover{
+    font-size: 0.8rem;
+    color: #04a72d;
+    background-color: #D0E5F3;
+    text-align: center;
+    align-items: center;
+  }
+  #input-name {
+    text-align: center;
+    width: 50%;
+    height: 6vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+    margin: auto;
+    font-size: 1.5rem;
+    background-color: #313334;
+    color:#D0E5F3;
+    
+  }
+  #bottom-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 2%;
+  }
+  
   /* .rocket-background img{
       width: 80%;
   } */

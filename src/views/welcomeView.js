@@ -31,6 +31,7 @@ export const createWelcomeElement = () => {
   outerDiv.appendChild(bottomDiv);
   const inputName = document.createElement('input');
   inputName.setAttribute('id', INPUT_NAME);
+  //inputName.required; -- we need to check this !!!!
   inputName.placeholder = '  Enter your name';
   bottomDiv.appendChild(inputName);
   const button = document.createElement('button');
@@ -39,11 +40,5 @@ export const createWelcomeElement = () => {
 
   button.textContent = 'Start Quiz';
   
-
-  // outerDiv.innerHTML = String.raw`
-  //   <h1>Welcome</h1>
-  //  <p>selam</p>
-  //   <button id="${START_QUIZ_BUTTON_ID}">start quiz</button>
-  // `;
   return outerDiv;
 };
