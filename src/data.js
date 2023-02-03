@@ -1,6 +1,5 @@
-// MY JS CODE STARTS FROM HERE ---------------------------------------------------
 
-// fill data and change format for all elements
+
 export const quizData = {
   userName: '',
   currentQuestionIndex: 0,
