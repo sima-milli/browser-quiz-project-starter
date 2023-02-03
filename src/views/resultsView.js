@@ -35,7 +35,7 @@ export const createResultsElement = () => {
   const element = document.createElement('div');
   userInterface.appendChild(element);
   element.innerHTML = String.raw`
-    <h2>You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
+    <h2>${quizData.userName} You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
           
     <button id="${BACK_TO_WELCOME_PAGE_BUTTON_ID}">Redo Quiz</button>
   `;
