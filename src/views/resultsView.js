@@ -1,30 +1,30 @@
-import {
-  BACK_TO_WELCOME_PAGE_BUTTON_ID,
-  USER_INTERFACE_ID,
-} from '../constants.js';
+import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants.js';
 import { quizData } from '../data.js';
 
 const getSelected = () => {
   let answerEls = document.querySelectorAll('input[name="answer"]');
-  let answer; // array
+  let answer = []; // array
+  console.log('answerEls', answerEls);
   answerEls.forEach((answerEl) => {
-    if (answerEl.checked) {
-      answer = answerEl.id;
-    }
+    answer.push(answerEl.id);
   });
+  console.log('answer1: ', answer);
   return answer;
 };
 
 const getScore = () => {
   let score = 0;
-  let currentQuiz = 0;
   const answer = getSelected();
-  if (answer) {
-    if (answer === quizData.questions[currentQuiz].correct) {
-      score++;
+  console.log('answer2: ', answer);
+  if (answer.length) {
+    for (let i = 0; i < answer.length; i++) {
+      if (answer[i] === quizData.questions[i].correct) {
+        score++;
+      }
     }
-    currentQuiz++;
   }
+
+  console.log('score: ', score);
   return score;
 };
 

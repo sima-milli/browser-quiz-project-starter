@@ -46,4 +46,4 @@ const nextQuestion = () => {
 
 const goToResultsPage = () => {
   initResultsPage();
-}
+};
