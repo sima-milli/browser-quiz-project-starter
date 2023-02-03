@@ -1,6 +1,6 @@
-import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants.js';
-import { quizData } from '../data.js';
+// correct answer view
 
+// this function will get the answer provided by user
 const getSelected = () => {
   // we can use this function in the questions view to show the rocket when user select the correct answer after each question
   let answerEls = document.querySelectorAll('input[name="answer"]');
@@ -15,10 +15,10 @@ const getSelected = () => {
   return answer;
 };
 
+// this function is to check if the selected answer is the correct one
 const getScore = () => {
   let score = 0;
   const answer = getSelected();
-  console.log('answer2: ', answer);
   if (answer.length) {
     for (let i = 0; i < answer.length; i++) {
       if (answer[i] === quizData.questions[i].correct) {
@@ -26,18 +26,8 @@ const getScore = () => {
       }
     }
   }
-
-  console.log('score: ', score);
+  // you can use else to do the steps for wrong answer (rocket going down for example)
   return score;
 };
 
-export const createResultsElement = () => {
-  const score = getScore();
-  const element = document.createElement('div');
-  element.innerHTML = String.raw`
-    <h2>You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
-          
-    <button id="${BACK_TO_WELCOME_PAGE_BUTTON_ID}">Redo Quiz</button>
-  `;
-  return element;
-};
+// if you need more steps for correct answer flow it should go here
