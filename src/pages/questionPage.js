@@ -6,7 +6,7 @@ import {
   ANSWERS_LIST_ID,
   NEXT_QUESTION_BUTTON_ID,
 } from '../constants.js';
-import { createResultsElement } from '../views/resultsView.js';
+import { initResultsPage } from './resultsPage.js';
 
 export const initQuestionPage = () => {
   const userInterface = document.getElementById(USER_INTERFACE_ID);
@@ -30,7 +30,7 @@ export const initQuestionPage = () => {
     resultButton.id = 'show-results-button';
     document
       .getElementById('show-results-button')
-      .addEventListener('click', createResultsElement);
+      .addEventListener('click', goToResultsPage);
   } else {
     document
       .getElementById(NEXT_QUESTION_BUTTON_ID)
@@ -42,4 +42,8 @@ const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
 
   initQuestionPage();
+};
+
+const goToResultsPage = () => {
+  initResultsPage();
 };
