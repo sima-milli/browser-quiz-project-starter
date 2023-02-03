@@ -30,10 +30,7 @@ const getScore = () => {
 
 export const createResultsElement = () => {
   const score = getScore();
-  const userInterface = document.getElementById(USER_INTERFACE_ID);
-  userInterface.innerHTML = '';
   const element = document.createElement('div');
-  userInterface.appendChild(element);
   element.innerHTML = String.raw`
     <h2>You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
           
