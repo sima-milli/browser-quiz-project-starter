@@ -9,6 +9,8 @@ import {
 import { initResultsPage } from './resultsPage.js';
 
 export const initQuestionPage = () => {
+  let scoreCount = 0; // in here we'll store the score for all questions and send it to results page
+
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 
@@ -40,10 +42,15 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
-
+  /* 
+    correct answer view should be call here before going to next question. And should be repeated for each question with correct answer.
+    before displaying we can store the correct answer count returned from `getScore` and add it to the 
+    to the defined scoreCount variable in line 12. and then send it to results page in line 54.
+  */
   initQuestionPage();
 };
 
 const goToResultsPage = () => {
+  // we should send the scoreCount as a parameter to the results page when show results button is clicked.
   initResultsPage();
 };
