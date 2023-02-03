@@ -51,5 +51,6 @@ const nextQuestion = () => {
 };
 
 const goToResultsPage = () => {
+  // we should send the scoreCount as a parameter to the results page when show results button is clicked.
   initResultsPage();
 };
