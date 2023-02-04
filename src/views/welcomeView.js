@@ -20,7 +20,7 @@ export const createWelcomeElement = () => {
   const h1 = document.createElement('h1');
   h1.setAttribute('id', WELCOME_H1);
   outerDiv.appendChild(h1);
-  h1.textContent = 'Hello';
+  h1.textContent = 'Welcome Stranger';
   const h4 = document.createElement('h4');
   h4.setAttribute('id', QUIZ_RULES_LIST);
   outerDiv.appendChild(h4);
@@ -35,14 +35,8 @@ export const createWelcomeElement = () => {
   bottomDiv.appendChild(inputName);
   const button = document.createElement('button');
   button.setAttribute('id', START_QUIZ_BUTTON_ID);
-  //const buttonImage =
   button.textContent = 'Start Quiz';
   bottomDiv.appendChild(button);
 
-  // outerDiv.innerHTML = String.raw`
-  //   <h1>Welcome</h1>
-  //  <p>selam</p>
-  //   <button id="${START_QUIZ_BUTTON_ID}">start quiz</button>
-  // `;
   return outerDiv;
 };

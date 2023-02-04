@@ -1,9 +1,7 @@
 import { BACK_TO_WELCOME_PAGE_BUTTON_ID } from '../constants.js';
 import { quizData } from '../data.js';
 
-
-// ===> we can delete `getSelected` and `getScore` from here because they are now moved to correct view 
-
+// ===> we can delete `getSelected` and `getScore` from here because they are now moved to correct view
 
 const getSelected = () => {
   // we can use this function in the questions view to show the rocket when user select the correct answer after each question
@@ -40,7 +38,7 @@ export const createResultsElement = () => {
   const score = getScore();
   const element = document.createElement('div');
   element.innerHTML = String.raw`
-    <h2>You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
+    <h2>${quizData.userName} You answered ${score} correct answers out of ${quizData.questions.length} questions</h2>
           
     <button id="${BACK_TO_WELCOME_PAGE_BUTTON_ID}">Redo Quiz</button>
   `;
