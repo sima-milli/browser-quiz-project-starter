@@ -103,7 +103,7 @@ button:hover {
   flex-direction: column;
   text-align: center;
   justify-content: space-around;
-  height: 50vh;
+  height: 60vh;
   font-family: 'Teko', sans-serif;
   opacity: 0.8;
   backdrop-filter: blur(15px);
@@ -119,6 +119,7 @@ button:hover {
   display: flex;
   text-align: center;
   justify-content: space-around;
+  padding: 15px;
 }
 
 #input-name {
