@@ -20,6 +20,9 @@ export const initWelcomePage = () => {
 };
 
 const startQuiz = () => {
-  quizData.userName = document.getElementById(INPUT_NAME).value;
-  initQuestionPage();
+  if ((quizData.userName = document.getElementById(INPUT_NAME).value === '')) {
+    alert('Please enter your name!');
+  } else {
+    initQuestionPage();
+  }
 };
