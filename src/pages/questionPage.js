@@ -59,7 +59,6 @@ const nextQuestion = () => {
 // if(!localStorage.getItem("quiz")|| JSON.parse(localStorage.getItem("quiz")).length == 0){
 //  $window.localStorage.setItem("quiz", JSON.stringify(quizData));
 // };
-=======
 
 const goToResultsPage = () => {
   // we should send the scoreCount as a parameter to the results page when show results button is clicked.

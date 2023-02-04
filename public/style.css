@@ -34,7 +34,6 @@ body {
   width: 40%;
 }
 
-
 .quiz-container {
   background-color: rgb(250, 250, 250);
   border-radius: 10px;
@@ -42,7 +41,6 @@ body {
   width: 900px;
   overflow: hidden;
   opacity: 0.8;
-
 }
 
 .quiz-header {
@@ -96,8 +94,6 @@ button:hover {
   scale: 1.2;
   transition: 1s;
 }
-
-
 
 /*WELCOME PAGE STYLES*/
 
