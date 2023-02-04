@@ -14,7 +14,7 @@ export const initResultsPage = () => {
 
   document
     .getElementById(BACK_TO_WELCOME_PAGE_BUTTON_ID)
-    .addEventListener('click', backToWelcomePage());
+    .addEventListener('click', backToWelcomePage);
 };
 
 const backToWelcomePage = () => {
