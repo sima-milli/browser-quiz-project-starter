@@ -5,8 +5,8 @@ import {
   USER_INTERFACE_ID,
 } from '../constants.js';
 
-export const initResultsPage = () => {
-  const resultsElement = createResultsElement();
+export const initResultsPage = (score) => {
+  const resultsElement = createResultsElement(score);
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 

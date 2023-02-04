@@ -8,6 +8,8 @@ import { initQuestionPage } from '../pages/questionPage.js';
 import { quizData } from '../data.js';
 
 export const initWelcomePage = () => {
+  quizData.currentQuestionIndex = 0;
+  quizData.scoreCount = 0;
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 
