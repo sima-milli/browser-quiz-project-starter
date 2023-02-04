@@ -4,9 +4,10 @@ import {
   BACK_TO_WELCOME_PAGE_BUTTON_ID,
   USER_INTERFACE_ID,
 } from '../constants.js';
+import { quizData } from '../data.js';
 
-export const initResultsPage = () => {
-  const resultsElement = createResultsElement();
+export const initResultsPage = (score) => {
+  const resultsElement = createResultsElement(score);
   const userInterface = document.getElementById(USER_INTERFACE_ID);
   userInterface.innerHTML = '';
 

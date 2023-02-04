@@ -41,7 +41,7 @@ export const quizData = {
         c: '451',
         d: '88',
       },
-      correct: 'c',
+      correct: 'b',
     },
     {
       text: 'Io is a moon of which planet?',
