@@ -23,6 +23,8 @@ export const createQuestionElement = (question) => {
       Next question
     </button>
   `;
-
   return element;
+
+  
 };
+

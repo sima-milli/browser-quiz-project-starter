@@ -16,34 +16,33 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
 @keyframes animate {
   100% {
     background-position: 3000px 3000px;
   }
 }
-
 .rocket-background {
   position: absolute;
   display: grid;
   place-items: center;
   height: 100vh;
   z-index: -1;
-  margin-top: -20rem;
 }
 
 .rocket-background img {
   width: 40%;
 }
 
+
 .quiz-container {
-  background-color: aliceblue;
+  background-color: rgb(250, 250, 250);
   border-radius: 10px;
-  box-shadow: 0 0 10px 2px black;
+  box-shadow: 0 0 10px 2px rgb(0, 55, 255);
   width: 900px;
   overflow: hidden;
-  backdrop-filter: blur(15px);
-  /* margin-bottom: 55rem; */
   opacity: 0.8;
+
 }
 
 .quiz-header {
@@ -57,13 +56,22 @@ h2 {
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  list-style: none;
+  padding: 3rem;
 }
 
 ul li {
   font-size: 1.2rem;
   margin: 1rem 0;
+  padding: 1rem;
+  width: 20rem;
+  height: 5rem;
+  border: 1px solid rgb(0, 55, 255);
+  border-radius: 9999px;
+  background-color: rgb(250, 170, 170);
 }
 
 ul li label {
@@ -79,16 +87,18 @@ button {
   font-size: 1.1rem;
   font-family: inherit;
   padding: 1.3rem;
+  border: none;
 }
 
 button:hover {
   background-color: rgb(169, 169, 169);
+  color: rgb(0, 26, 255);
+  scale: 1.2;
+  transition: 1s;
 }
 
-button:focus {
-  outline: none;
-  background-color: rgb(30, 166, 0);
-}
+
+
 /*WELCOME PAGE STYLES*/
 
 #welcome-outer-div {
@@ -104,11 +114,13 @@ button:focus {
 #quiz-rules-list {
   white-space: pre;
 }
+
 #bottom-div {
   display: flex;
   text-align: center;
   justify-content: space-around;
 }
+
 #input-name {
   width: 25%;
   height: 6vh;
@@ -116,7 +128,7 @@ button:focus {
 
 #start-quiz-button {
   width: 25%;
-  height: 6vh;
+  height: 5vh;
 }
 
 @media (max-width: 900px) {
@@ -125,7 +137,8 @@ button:focus {
     display: grid;
     margin-top: -5rem;
   }
-  /* .rocket-background img{
-      width: 80%;
-  } */
+
+  .rocket-background img {
+    width: 80%;
+  }
 }
