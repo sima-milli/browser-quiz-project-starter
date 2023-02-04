@@ -10,6 +10,7 @@
 */
 
 export const quizData = {
+  userName: '',
   currentQuestionIndex: 0,
   questions: [
     {
