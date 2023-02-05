@@ -36,7 +36,6 @@ export const initQuestionPage = () => {
     document
       .getElementById(NEXT_QUESTION_BUTTON_ID)
       .addEventListener('click', nextQuestion);
-      
   }
 };
 
@@ -60,5 +59,3 @@ const countScoreAndShowResults = () => {
 const goToResultsPage = (score) => {
   initResultsPage(score);
 };
-
-

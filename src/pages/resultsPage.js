@@ -20,5 +20,3 @@ export const initResultsPage = (score) => {
 const backToWelcomePage = () => {
   initWelcomePage();
 };
-
-

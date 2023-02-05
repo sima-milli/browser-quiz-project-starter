@@ -29,5 +29,3 @@ const startQuiz = () => {
     initQuestionPage();
   }
 };
-
-
