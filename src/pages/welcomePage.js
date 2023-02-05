@@ -22,10 +22,6 @@ export const initWelcomePage = () => {
 };
 
 const startQuiz = () => {
-  if ((quizData.userName = document.getElementById(INPUT_NAME).value === '')) {
-    alert('Please enter your name!');
-  } else {
-    quizData.userName = document.getElementById(INPUT_NAME).value;
-    initQuestionPage();
-  }
+  quizData.userName = document.getElementById(INPUT_NAME).value;
+  initQuestionPage();
 };
