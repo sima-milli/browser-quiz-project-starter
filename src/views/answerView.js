@@ -17,6 +17,5 @@ export const createAnswerElement = (key, answerText) => {
   listItem.appendChild(answer);
   label.setAttribute('for', key);
   label.innerText = answerText;
-
   return listItem;
 };

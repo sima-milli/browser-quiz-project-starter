@@ -36,6 +36,7 @@ export const initQuestionPage = () => {
     document
       .getElementById(NEXT_QUESTION_BUTTON_ID)
       .addEventListener('click', nextQuestion);
+      
   }
 };
 
@@ -49,15 +50,6 @@ const nextQuestion = () => {
   }
 };
 
-// save page data after refresh
-// let quiz = document.querySelector("#quiz");
-// quiz.value = localStorage.getItem("quiz");
-// quiz.addEventListener("keyup", event => {
-// localStorage.setItem("quiz", event.target.value)})
-
-// if(!localStorage.getItem("quiz")|| JSON.parse(localStorage.getItem("quiz")).length == 0){
-//  $window.localStorage.setItem("quiz", JSON.stringify(quizData));
-// };
 const countScoreAndShowResults = () => {
   if (getSelected() !== undefined) {
     getSelected();
@@ -68,3 +60,5 @@ const countScoreAndShowResults = () => {
 const goToResultsPage = (score) => {
   initResultsPage(score);
 };
+
+
