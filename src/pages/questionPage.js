@@ -41,9 +41,9 @@ export const initQuestionPage = () => {
 
 const nextQuestion = () => {
   if (getSelected() !== undefined) {
+    // think of a way to remove duplicated code in here and line 53.
     getSelected();
     getScore();
-
     quizData.currentQuestionIndex = quizData.currentQuestionIndex + 1;
     initQuestionPage();
   }
