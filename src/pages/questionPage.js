@@ -39,7 +39,13 @@ export const initQuestionPage = () => {
   }
 };
 
+const timerCountDown = () => {
+  return quizData.secCount-- 
+}
+
 const nextQuestion = () => {
+  quizData.secCount = 30;
+  setInterval(timerCountDown, 1000)
   if (getSelected() !== undefined) {
     getSelected();
     getScore();

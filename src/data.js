@@ -10,6 +10,7 @@
 */
 
 export const quizData = {
+  secCount : 30,
   userName: '',
   currentQuestionIndex: 0,
   scoreCount: 0,

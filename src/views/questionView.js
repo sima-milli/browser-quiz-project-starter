@@ -9,6 +9,7 @@ export const createQuestionElement = (question) => {
   const element = document.createElement('div');
   if (quizData.currentQuestionIndex === 0) {
     element.innerHTML = String.raw`
+    <p>00:${quizData.secCount}</p>
     <h1>${quizData.currentQuestionIndex + 1}/${
       quizData.questions.length
     } ${question}</h1>
@@ -22,6 +23,7 @@ export const createQuestionElement = (question) => {
   `;
   } else {
     element.innerHTML = String.raw`
+    <p>00:${quizData.secCount}</p>
   <h1>${quizData.currentQuestionIndex + 1}/${
       quizData.questions.length
     } ${question}</h1>
